@@ -19,3 +19,15 @@ with open("D:\\Python\\Notes\\KVR Notes-01\\FILES\\notes\\python.info","r") as f
     filedata = fp.read(6)
     print("File Data=", filedata)  #
     print("Now, Pos of fp=", fp.tell())
+
+    print("-------------------------------")
+
+    filedata = fp.read()
+    print("File Data=", filedata)  #
+    print("Now, Pos of fp=", fp.tell())  # Now, Pos of fp= 206
+
+    print("-------------------------------")
+    # Re-set the file pointer position to 10th Index
+
+    fp.seek(10)  # Now fp points 10th index
+    print("Now, Pos of fp after seek() =", fp.tell())  #
