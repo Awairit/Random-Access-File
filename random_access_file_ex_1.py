@@ -30,4 +30,4 @@ with open("D:\\Python\\Notes\\KVR Notes-01\\FILES\\notes\\python.info","r") as f
     # Re-set the file pointer position to 10th Index
 
     fp.seek(10)  # Now fp points 10th index
-    print("Now, Pos of fp after seek() =", fp.tell())  #
+    print("Now, Pos of fp after seek() =", fp.tell())  # Now, Pos of fp after seek() = 10
