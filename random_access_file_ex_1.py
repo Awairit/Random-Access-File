@@ -12,13 +12,17 @@ KVR is the Faculty for Python"""
 with open("D:\\Python\\Notes\\KVR Notes-01\\FILES\\notes\\python.info","r") as fp:
     print("Initially, Pos of fp =", fp.tell())  # Initially, Pos of fp= 0
     filedata = fp.read(5)
+
     print("File Data=", filedata)  # File Data= Guido
     filedata = fp.read(5)
-    print("File Data=", filedata)  #
-    print("Now, Pos of fp=", fp.tell())  #
+
+    print("File Data=", filedata)  # File Data=  Van
+    print("Now, Pos of fp=", fp.tell())  # Now, Pos of fp= 10
+
     filedata = fp.read(6)
-    print("File Data=", filedata)  #
-    print("Now, Pos of fp=", fp.tell())
+
+    print("File Data=", filedata)  # File Data= Rossum
+    print("Now, Pos of fp=", fp.tell()) # Now, Pos of fp= 16
 
     print("-------------------------------")
 
@@ -31,3 +35,32 @@ with open("D:\\Python\\Notes\\KVR Notes-01\\FILES\\notes\\python.info","r") as f
 
     fp.seek(10)  # Now fp points 10th index
     print("Now, Pos of fp after seek() =", fp.tell())  # Now, Pos of fp after seek() = 10
+
+    print("-------------------------------")
+
+    filedata = fp.read(3)
+    print("File Data=", filedata)  # File Data= Ros
+    print("Now, Pos of fp=", fp.tell())  # Now, Pos of fp= 13
+
+    print("-------------------------------")
+
+    # Re-set the file pointer position to 0th Index
+    fp.seek(0)  # Now fp points 10th index
+    print("Now, Pos of fp after seek() =", fp.tell())  # Now, Pos of fp after seek() = 0
+
+    print("-------------------------------")
+
+    filedata = fp.read(16)
+    print("File Data=", filedata)  # File Data= Guido Van Rossum
+    print("Now, Pos of fp=", fp.tell())  # Now, Pos of fp= 16
+
+    print("-------------------------------")
+
+    filedata = fp.read()
+    print("File Data=", filedata)  #
+    print("Now, Pos of fp=", fp.tell())  # Now, Pos of fp= 206
+
+    print("-------------------------------")
+
+    filedata = fp.read()
+    print("File Data=", filedata)  #
